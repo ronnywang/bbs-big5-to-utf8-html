@@ -1,0 +1,41 @@
+pre {
+    background-color: rgb(0, 0, 0);
+    color: rgb(175, 175, 175);
+    font-family: "AR PL UMING TW", "細明體", mingliu, Courier, monospace;
+    font-size: 14pt;
+    white-space: pre;
+    line-height: 100%;
+}
+pre a {
+    text-decoration: none;
+    border-bottom:1px solid orange;
+    color: inherit;
+}
+.right_word {
+    display: none;
+    position: absolute;
+}
+.fg_0 { color: rgb(0, 0, 0); }
+.fg_1 { color: rgb(112, 0, 0); }
+.fg_2 { color: rgb(26, 112, 0); }
+.fg_3 { color: rgb(109, 112, 0); }
+.fg_4 { color: rgb(0, 0, 114); }
+.fg_5 { color: rgb(104, 0, 114); }
+.fg_6 { color: rgb(25, 109, 109); }
+.fg_7 { color: rgb(175, 175, 175); }
+.light_fg_0 { color: rgb(49, 49, 49); }
+.light_fg_1 { color: rgb(245, 0, 0); }
+.light_fg_2 { color: rgb(61, 255, 0); }
+.light_fg_3 { color: rgb(255, 255, 0);; }
+.light_fg_4 { color: rgb(0, 0, 255); }
+.light_fg_5 { color: rgb(244, 0, 255); }
+.light_fg_6 { color: rgb(59, 255, 255); }
+.light_fg_7 { color: rgb(255, 255, 255);; }
+.bg_0 { background-color: rgb(0, 0, 0); }
+.bg_1 { background-color: rgb(112, 0, 0); }
+.bg_2 { background-color: rgb(26, 112, 0); }
+.bg_3 { background-color: rgb(109, 112, 0); }
+.bg_4 { background-color: rgb(0, 0, 114); }
+.bg_5 { background-color: rgb(104, 0, 114); }
+.bg_6 { background-color: rgb(25, 109, 109); }
+.bg_7 { background-color: rgb(175, 175, 175); }
