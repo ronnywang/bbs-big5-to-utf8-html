@@ -6,7 +6,8 @@ class Converter
     {
 	$content = '';
 	$terms = array();
-	$big5ed = false;
+        $big5ed = false;
+        $colored = null;
 	$last_class = null;
 
 	for ($i = 0; $i < strlen($message); $i ++) {
@@ -81,8 +82,8 @@ class Converter
 		    $j ++;
 		}
 
-		$content .= htmlspecialchars($message[$i] . $message[$j]);
-		$last_word = $message[$i] . $message[$j];
+		$content .= htmlspecialchars(self::big5ToUTF8($message[$i] . $message[$j]));
+		$last_word = self::big5ToUTF8($message[$i] . $message[$j]);
 		$big5ed = true;
 	    } elseif ($big5ed and ((ord($message[$i]) >= 0x40 and ord($message[$i]) <= 0x7e) or (ord($message[$i]) >= 0xa1 and ord($message[$i]) <= 0xfe))) { // Big5 後一個字
 		if ($is_double) {
@@ -91,7 +92,7 @@ class Converter
 		}
 		$big5ed = false;
 	    } else {
-		$content .= htmlspecialchars($message[$i]);
+                $content .= htmlspecialchars($message[$i]);
 		$big5ed = false;
 	    }
 	}
@@ -100,10 +101,7 @@ class Converter
 	    $content .= '</span>';
 	}
 
-        //	return iconv('BIG5-2003', 'UTF-8//IGNORE', $content);
-	return preg_replace_callback('/[\x81-\xfe]([\x40-\x7e]|[\xa1-\xfe])/', function($matches){
-	    return self::big5ToUTF8($matches[0]);
-	}, $content);
+        return $content;
     }
 
     static protected $_maps = null;
