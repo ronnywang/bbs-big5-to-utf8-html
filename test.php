@@ -10,6 +10,8 @@ $content = file_get_contents('test.in');
 <link rel="stylesheet" href="bbs.css">
 </head>
 <body>
-<pre><?= Converter::convert($content) ?></pre>
+<div class="border">
+    <pre><?= Converter::convert($content) ?></pre>
+</div>
 </body>
 </html>
