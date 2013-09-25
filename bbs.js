@@ -27,7 +27,7 @@ var filter_doublecolor = function(){
 	});
     });
 };
-$(function(){
+$(document).ready(function(){
         filter_link();
         filter_doublecolor();
 });
