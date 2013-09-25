@@ -16,6 +16,7 @@ var filter_doublecolor = function(){
 	return;
     }
     var width = $('.border .right_word').width();
+
     $('.border .right_word').each(function(){
 	var self = $(this);
 	self.show();
@@ -27,7 +28,8 @@ var filter_doublecolor = function(){
 	});
     });
 };
-$(document).ready(function(){
+
+$(window).load(function(){
         filter_link();
         filter_doublecolor();
 });
